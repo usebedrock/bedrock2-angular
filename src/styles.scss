@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+  Stylesheet for Ember demo
+   ========================================================================== */
+
+@import "scss/_reset";
+@import "scss/_e-base";
+
+
+// Components
+@import "scss/c-button";
+@import "scss/c-input";
+@import "scss/c-content";
+@import "scss/c-label";
+@import "scss/c-form-group";
