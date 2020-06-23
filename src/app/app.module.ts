@@ -7,9 +7,10 @@ import { ButtonComponent } from './components/button/button.component';
 import { PrototypeWrapperComponent } from './components/prototype-wrapper/prototype-wrapper.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ModuleOneComponent } from './pages/dashboard/module-one/module-one.component';
-import { ModuleTwoComponent } from './pages/dashboard/module-two/module-two.component';
-import { ModuleThreeComponent } from './pages/dashboard/module-three/module-three.component';
+import { StyleguideComponent } from './styleguide/styleguide.component';
+import { ColorsComponent } from './styleguide/colors/colors.component';
+import { IconsComponent } from './styleguide/icons/icons.component';
+import { TypographyComponent } from './styleguide/typography/typography.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { ModuleThreeComponent } from './pages/dashboard/module-three/module-thre
     PrototypeWrapperComponent,
     SignInComponent,
     DashboardComponent,
-    ModuleOneComponent,
-    ModuleTwoComponent,
-    ModuleThreeComponent
+    StyleguideComponent,
+    ColorsComponent,
+    IconsComponent,
+    TypographyComponent,
   ],
   imports: [
     BrowserModule,
