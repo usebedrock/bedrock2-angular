@@ -6,6 +6,13 @@
   <div class="br-styleguide-sample__sample">
     <ng-content></ng-content>
   </div>
+
+  <div class *ngIf="this.code">
+   <br-button (click)="isVisible=!isVisible">Toggle code</br-button>
+   <pre class="br-styleguide-code-block" *ngIf="this.isVisible">
+    <code>{{this.code}}</code>
+  </pre>
+  </div>
 </div>
 
 

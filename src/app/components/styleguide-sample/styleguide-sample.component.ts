@@ -7,6 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StyleguideSampleComponent implements OnInit {
   @Input() title?: string = 'default';
+  @Input() code?: string;
+  isVisible: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
