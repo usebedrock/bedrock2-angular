@@ -12,6 +12,8 @@ import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { IconsComponent } from './pages/styleguide/icons/icons.component';
 import { TypographyComponent } from './pages/styleguide/typography/typography.component';
 import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-skins.component';
+import { ComponentPageIntroComponent } from './components/component-page-intro/component-page-intro.component';
+import { StyleguideSampleComponent } from './components/styleguide-sample/styleguide-sample.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-ski
     IconsComponent,
     TypographyComponent,
     ButtonSkinsComponent,
+    ComponentPageIntroComponent,
+    StyleguideSampleComponent,
   ],
   imports: [
     BrowserModule,
