@@ -1,3 +1,7 @@
-// Styleguide SCSS
+// Variables
+@import "s-colors";
 
+// Styleguide SCSS
 @import "_br-prototype-wrapper";
+@import "_br-styleguide-bordered-list";
+@import "_br-styleguide-bordered-list-header";

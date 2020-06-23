@@ -1,0 +1,30 @@
+/* ==========================================================================
+  Component: styleguide bordered list
+  ========================================================================== */
+
+.br-styleguide-bordered-list {
+  margin: 0 0 1.6rem;
+}
+
+.br-styleguide-bordered-list ul {
+  margin: 0 0 0 1.6rem;
+}
+
+.br-styleguide-bordered-list li {
+  border-bottom: 0.1rem solid $gray-200;
+}
+
+.br-styleguide-bordered-list li:last-child {
+  border: none;
+}
+
+.br-styleguide-bordered-list a {
+  display: block;
+  padding: 0.6rem;
+  color: $blue-700;
+  text-decoration: none;
+}
+
+.br-styleguide-bordered-list a.active {
+  background: $gray-100;
+}
