@@ -1,8 +1,8 @@
-<div class="br-prototype-wrapper" *ngIf="isVisible">
+<div class="br-prototype-wrapper">
   <div class="br-prototype-wrapper__content">
     <ng-content></ng-content>
   </div>
-  <div class="br-prototype-wrapper__nav">
+  <div class="br-prototype-wrapper__nav" *ngIf="isVisible">
     <div class="u-m-2">
       <div class="c-content">
         <p>
