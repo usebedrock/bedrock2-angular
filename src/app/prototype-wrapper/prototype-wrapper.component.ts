@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prototype-wrapper.component.scss']
 })
 export class PrototypeWrapperComponent implements OnInit {
-
+  isVisible: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
