@@ -14,6 +14,10 @@ import { TypographyComponent } from './pages/styleguide/typography/typography.co
 import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-skins.component';
 import { ComponentPageIntroComponent } from './components/component-page-intro/component-page-intro.component';
 import { StyleguideSampleComponent } from './components/styleguide-sample/styleguide-sample.component';
+import { IconComponent } from './components/icon/icon.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 @NgModule({
   declarations: [
@@ -29,10 +33,13 @@ import { StyleguideSampleComponent } from './components/styleguide-sample/styleg
     ButtonSkinsComponent,
     ComponentPageIntroComponent,
     StyleguideSampleComponent,
+    IconComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    InlineSVGModule.forRoot({ baseUrl: '../../assets/icons/' }),
   ],
   providers: [],
   bootstrap: [AppComponent]

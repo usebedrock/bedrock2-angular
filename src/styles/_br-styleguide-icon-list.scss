@@ -19,4 +19,6 @@
 .br-styleguide-icon-list > li {
   min-width: 24rem;
   padding: 0 0.8rem 0.8rem 0;
+  display: flex;
+  align-items: center;
 }
