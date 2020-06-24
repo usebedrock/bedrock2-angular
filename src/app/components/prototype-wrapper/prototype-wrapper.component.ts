@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'br-prototype-wrapper',
@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrototypeWrapperComponent implements OnInit {
   isVisible: boolean = true;
+
+  @HostListener("window:keydown.control.m", ['$event'])
+  @HostListener("window:keydown.control.b", ['$event'])
+
+  onKeyDown(event:KeyboardEvent) {
+
+    this.isVisible=!this.isVisible
+  }
+
   constructor() { }
 
   ngOnInit(): void {
