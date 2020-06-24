@@ -1,0 +1,18 @@
+<div class="br-styleguide-sample">
+  <div class="c-content">
+    <h3>{{this.title}}</h3>
+  </div>
+
+  <div class="br-styleguide-sample__sample">
+    <ng-content></ng-content>
+  </div>
+
+  <div class *ngIf="this.code">
+   <br-button skin="tertiary" (click)="isVisible=!isVisible">Toggle code</br-button>
+   <pre class="br-styleguide-code-block" *ngIf="this.isVisible">
+    <code>{{this.code}}</code>
+  </pre>
+  </div>
+</div>
+
+

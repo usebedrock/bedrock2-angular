@@ -1,0 +1,15 @@
+<br-component-page-intro title="Typography">
+  <p>This page documents the different typography styles.</p>
+</br-component-page-intro>
+
+<table class="br-type-sample">
+  <tr *ngFor="let style of styles">
+    <td class="c-content br-type-sample__label">
+      <div class="br-type-sample">
+        <p>{{style.name}}</p>
+      </div>
+    </td>
+    <td class="br-type-sample__sample" [innerHTML]=style.code>
+    </td>
+  </tr>
+</table>

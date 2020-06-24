@@ -1,0 +1,33 @@
+<div class="br-styleguide-columns">
+  <div class="br-styleguide-columns__column">
+    <div class="u-m-2">
+      <nav>
+        <h4 class="br-styleguide-bordered-list-header">Basics</h4>
+        <ul class="br-styleguide-bordered-list">
+          <li>
+            <a routerLink="/styleguide/colors">Colors</a>
+          </li>
+          <li>
+            <a routerLink="/styleguide/icons">Icons</a>
+          </li>
+          <li>
+            <a routerLink="/styleguide/typography">Typography</a>
+          </li>
+        </ul>
+        <h4 class="br-styleguide-bordered-list-header">Components</h4>
+        <ul class="br-styleguide-bordered-list">
+          <li>
+            <a routerLink="/styleguide/button-skins">Button skins</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="br-styleguide-columns__column">
+    <div class="br-styleguide-content">
+      <div class="u-m-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

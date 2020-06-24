@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+// Tint & shade helper functions
+// ---
+// Makes a color lighter
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+
+// Makes a color darker
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}
+
+// Color palette
+$gray-100    : #F4F5F6;
+$gray-200    : #E6E8EB;
+$gray-300    : #CCD1D9;
+$gray-400    : #A1ABBA;
+$gray-500    : #8E98A6;
+$gray-600    : #69717C;
+$gray-700    : #545961;
+$gray-800    : #2A2D31;
+$gray-900    : #212326;
+$gray-1000   : #000000;
+
+$blue-100    : #EDF6FF;
+$blue-200    : #DCECFD;
+$blue-300    : #C1DDFB;
+$blue-600    : #0F6FD7;
+$blue-700    : #0E5EB8;
+$blue-900    : #073261;

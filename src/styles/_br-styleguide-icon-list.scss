@@ -1,0 +1,24 @@
+/* ==========================================================================
+  Styleguide - Icon list
+  ========================================================================== */
+
+.br-styleguide-icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.br-styleguide-icon-list > li svg {
+  margin-right: 0.8rem;
+  position: relative;
+  top: 0.3rem;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.br-styleguide-icon-list > li {
+  min-width: 24rem;
+  padding: 0 0.8rem 0.8rem 0;
+  display: flex;
+  align-items: center;
+}
