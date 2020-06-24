@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { typographyStyles } from '../../../data/typography';
+import { typographyStyles } from './typography';
 @Component({
   selector: 'app-typography',
   templateUrl: './typography.component.html',
