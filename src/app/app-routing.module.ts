@@ -8,6 +8,7 @@ import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsCompone
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'styleguide', component: StyleguideComponent },
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
