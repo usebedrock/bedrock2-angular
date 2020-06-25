@@ -8,7 +8,6 @@ import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/a
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
-  { path: 'styleguide', component: StyleguideComponent },
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   {
     path: 'dashboard', component: DashboardComponent,
@@ -24,12 +23,12 @@ const routes: Routes = [
     path: 'styleguide', component: StyleguideComponent,
     children: [
       { path: 'intro', component: IntroComponent },
+      { path: '', redirectTo: 'intro', pathMatch: 'full' },
       { path: 'colors', component: ColorsComponent },
       { path: 'typography', component: TypographyComponent },
       { path: 'icons', component: IconsComponent },
       { path: 'button-skins', component: ButtonSkinsComponent },
       { path: 'alerts', component: AlertStyleguideComponent },
-      { path: '', redirectTo: 'intro', pathMatch: 'full' },
     ]
   },
 ];
