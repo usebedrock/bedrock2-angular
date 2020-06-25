@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { HttpClientModule } from '@angular/common/http';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PrototypeWrapperComponent } from './components/prototype-wrapper/prototype-wrapper.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent } from './pages/dashboard/index';
+import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard/index';
 import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { IconsComponent } from './pages/styleguide/icons/icons.component';
@@ -16,9 +18,8 @@ import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-ski
 import { ComponentPageIntroComponent } from './components/component-page-intro/component-page-intro.component';
 import { StyleguideSampleComponent } from './components/styleguide-sample/styleguide-sample.component';
 import { IconComponent } from './components/icon/icon.component';
-
-import { HttpClientModule } from '@angular/common/http';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InputComponent } from './components/input/input.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,9 @@ import { InlineSVGModule } from 'ng-inline-svg';
     ComponentPageIntroComponent,
     StyleguideSampleComponent,
     IconComponent,
+    InputComponent,
+    AlertComponent,
+    AddComponent,
   ],
   imports: [
     BrowserModule,

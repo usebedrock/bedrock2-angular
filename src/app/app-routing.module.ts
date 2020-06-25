@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent } from './pages/dashboard';
-import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent} from './pages/styleguide/index';
+import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard';
+import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent} from './pages/styleguide';
 
 
 const routes: Routes = [
@@ -12,9 +12,11 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
-      { path: 'module-1', component: ModuleOneComponent },
+      { path: 'module-1', component: ModuleOneComponent},
       { path: 'module-2', component: ModuleTwoComponent },
       { path: 'module-3', component: ModuleThreeComponent },
+      { path: 'module-1/add', component: AddComponent },
+      { path: '', redirectTo: 'module-1', pathMatch: 'full' },
     ]
   },
   {
@@ -29,7 +31,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 
