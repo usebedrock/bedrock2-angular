@@ -18,6 +18,7 @@ export class PrototypeWrapperComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

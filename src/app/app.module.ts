@@ -15,6 +15,7 @@ import { IconsComponent } from './pages/styleguide/icons/icons.component';
 import { TypographyComponent } from './pages/styleguide/typography/typography.component';
 import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-skins.component';
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
+import { IntroComponent } from './pages/styleguide/intro/intro.component';
 
 import { ButtonComponent } from './components/button/button.component';
 import { PrototypeWrapperComponent } from './components/prototype-wrapper/prototype-wrapper.component';
@@ -23,6 +24,7 @@ import { StyleguideSampleComponent } from './components/styleguide-sample/styleg
 import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { ButtonInnerComponent } from './components/button-inner/button-inner.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { AlertComponent } from './components/alert/alert.component';
     AlertComponent,
     AlertStyleguideComponent,
     AddComponent,
+    ButtonInnerComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,3 +62,4 @@ import { AlertComponent } from './components/alert/alert.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
