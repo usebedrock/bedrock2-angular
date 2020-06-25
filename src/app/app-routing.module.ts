@@ -7,27 +7,27 @@ import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/a
 
 
 const routes: Routes = [
-  { path: 'sign-in', component: SignInComponent },
-  { path: 'styleguide', component: StyleguideComponent },
+  { path: 'sign-in', data: { title: 'Sign in'}, component: SignInComponent },
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', data: { title: 'Dashboard'}, component: DashboardComponent,
     children: [
-      { path: 'module-1', component: ModuleOneComponent},
-      { path: 'module-2', component: ModuleTwoComponent },
-      { path: 'module-3', component: ModuleThreeComponent },
-      { path: 'module-1/add', component: AddComponent },
+      { path: 'module-1', data: { title: 'Module 1'}, component: ModuleOneComponent, children: [
+          { path: 'add', data: { title: 'Add'}, component: AddComponent }
+        ]},
+      { path: 'module-2', data: { title: 'Module 2'}, component: ModuleTwoComponent },
+      { path: 'module-3', data: { title: 'Module 3'}, component: ModuleThreeComponent },
       { path: '', redirectTo: 'module-1', pathMatch: 'full' },
     ]
   },
   {
-    path: 'styleguide', component: StyleguideComponent,
+    path: 'styleguide', data: { title: 'Styleguide' }, component: StyleguideComponent,
     children: [
-      { path: 'colors', component: ColorsComponent },
-      { path: 'typography', component: TypographyComponent },
-      { path: 'icons', component: IconsComponent },
-      { path: 'button-skins', component: ButtonSkinsComponent },
-      { path: 'alerts', component: AlertStyleguideComponent },
+      { path: 'colors', data: { title: 'Colors' }, component: ColorsComponent },
+      { path: 'typography', data: { title: 'Typography' }, component: TypographyComponent },
+      { path: 'icons', data: { title: 'Icons' }, component: IconsComponent },
+      { path: 'button-skins', data: { title: 'Button skins' }, component: ButtonSkinsComponent },
+      { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
     ]
   },
 ];

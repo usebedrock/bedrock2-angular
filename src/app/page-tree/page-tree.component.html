@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let page of pages">
+    <ng-container *ngTemplateOutlet="pageTree;context:{page: page}"></ng-container>
+  </li>
+</ul>
+
+<ng-template #pageTree let-page="page">
+  <a [routerLink]="page.path">{{page.name}}</a>
+  <ul *ngIf="page.children.length > 0" class="child-list">
+    <ng-container *ngFor="let child of page.children">
+      <li><ng-container *ngTemplateOutlet="pageTree;context:{page: child}"></ng-container></li>
+    </ng-container>
+  </ul>
+</ng-template>

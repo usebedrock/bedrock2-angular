@@ -23,6 +23,7 @@ import { StyleguideSampleComponent } from './components/styleguide-sample/styleg
 import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { PageTreeComponent } from './page-tree/page-tree.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AlertComponent } from './components/alert/alert.component';
     AlertComponent,
     AlertStyleguideComponent,
     AddComponent,
+    PageTreeComponent,
   ],
   imports: [
     BrowserModule,
