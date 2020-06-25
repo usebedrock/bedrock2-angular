@@ -16,15 +16,19 @@ export class PageTreeComponent {
   public pages: Page[] = [];
 
   public constructor(private readonly router: Router) {
-    this.pages = this.router.config.map(route => mapPages(route, ''));
+    this.pages = this.router.config
+      .filter(filterRoutes)
+      .map(route => mapRouteToPage(route, ''));
   }
 }
 
-function mapPages(route: Route, parentPath: string): Page {
+function mapRouteToPage(route: Route, parentPath: string): Page {
   let children: Page[] = [];
   const path = `${parentPath}/${route.path}`;
   if (route.children && route.children.length > 0) {
-    children = route.children.map(childRoute => mapPages(childRoute, path));
+    children = route.children
+      .filter(filterRoutes)
+      .map(childRoute => mapRouteToPage(childRoute, path));
   }
   const name = route.data ? route.data.title : route.path;
   return {
@@ -32,4 +36,8 @@ function mapPages(route: Route, parentPath: string): Page {
     path,
     children
   };
+}
+
+function filterRoutes(route: Route): boolean {
+  return !['styleguide', ''].includes(route.path);
 }
