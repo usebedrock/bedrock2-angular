@@ -1,1 +1,26 @@
-<p>module-one works!</p>
+<div class="u-m-2">
+  <table class="c-table c-table--bordered">
+    <thead>
+      <tr>
+        <th>Data header</th>
+        <th>Data header</th>
+        <th>Data header</th>
+        <th>Data header</th>
+        <th>Data header</th>
+        <th class="c-table__header c-table__header--actions"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of [].constructor(4)">
+        <td>Data punt</td>
+        <td>Data punt</td>
+        <td>Data punt</td>
+        <td>Data punt</td>
+        <td>Data punt</td>
+        <td class="c-table__cell c-table__cell--actions">
+          <br-button><br-icon name="chevron-right"></br-icon></br-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,6 +1,10 @@
 export const icons = [
   'add',
-  'minus',
-  'check',
-  'trash',
+  'chevron-left',
+  'chevron-right',
+  'close',
+  'delete',
+  'menu',
+  'question',
+  'time',
 ];

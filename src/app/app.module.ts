@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from "@angular/common";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PrototypeWrapperComponent } from './components/prototype-wrapper/prototype-wrapper.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent } from './pages/dashboard/index';
 import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { IconsComponent } from './pages/styleguide/icons/icons.component';
@@ -26,6 +27,9 @@ import { InlineSVGModule } from 'ng-inline-svg';
     PrototypeWrapperComponent,
     SignInComponent,
     DashboardComponent,
+    ModuleOneComponent,
+    ModuleTwoComponent,
+    ModuleThreeComponent,
     StyleguideComponent,
     ColorsComponent,
     IconsComponent,
@@ -37,6 +41,7 @@ import { InlineSVGModule } from 'ng-inline-svg';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     InlineSVGModule.forRoot({ baseUrl: '../../assets/icons/' }),
