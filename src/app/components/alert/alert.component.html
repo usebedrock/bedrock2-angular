@@ -1,4 +1,11 @@
 <div class="c-alert c-alert--{{this.skin}}"
   role="alert">
-  <ng-content></ng-content>
+  <div class="c-alert__content">
+    <ng-container [ngSwitch]="this.skin">
+      <br-icon *ngSwitchCase="'success'" name="circle-check"></br-icon>
+      <br-icon *ngSwitchCase="'error'" name="warning"></br-icon>
+      <br-icon *ngSwitchDefault name="circle-info"></br-icon>
+    </ng-container>
+    <ng-content></ng-content>
+  </div>
 </div>

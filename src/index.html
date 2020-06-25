@@ -5,7 +5,29 @@
   <title>Bedrock2Angular</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Dynamic favicon dark light mode -->
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="/favicon-dark.png" type="image/x-icon" id="dark-scheme-icon" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="/favicon.png" type="image/x-icon" id="light-scheme-icon" />
+
+    <script type="text/javascript">
+
+        const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+        const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+
+        matcher = window.matchMedia('(prefers-color-scheme: dark)');
+        matcher.addListener(onUpdate);
+        onUpdate();
+
+        function onUpdate() {
+          if (matcher.matches) {
+            lightSchemeIcon.remove();
+            document.head.append(darkSchemeIcon);
+          } else {
+            document.head.append(lightSchemeIcon);
+            darkSchemeIcon.remove();
+          }
+        }
+    </script>
 </head>
 <body>
   <app-root></app-root>

@@ -7,4 +7,6 @@ export const icons = [
   'menu',
   'question',
   'time',
+  'circle-check',
+  'circle-info'
 ];

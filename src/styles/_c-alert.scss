@@ -11,6 +11,16 @@
   justify-content: space-between;
 }
 
+.c-alert__content {
+  display: flex;
+  align-items: center;
+  .c-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: .8rem;
+  }
+}
+
 .c-alert--default {
   background: #FFF;
   border: 1px solid #CCC;
@@ -20,10 +30,16 @@
   background: #FFD0D0;
   border: 1px solid #EAA2A2;
   color: #C80000;
+  .c-icon * {
+    fill: #C80000;
+  }
 }
 
 .c-alert--success {
   background: #D6F7D1;
   border: 1px solid #ABE2A2;
   color: #32542D;
+  .c-icon * {
+    fill: #32542D;
+  }
 }
