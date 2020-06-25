@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard';
 import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent} from './pages/styleguide';
+import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
       { path: 'typography', component: TypographyComponent },
       { path: 'icons', component: IconsComponent },
       { path: 'button-skins', component: ButtonSkinsComponent },
+      { path: 'alerts', component: AlertStyleguideComponent },
     ]
   },
 ];

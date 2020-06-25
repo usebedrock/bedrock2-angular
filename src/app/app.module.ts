@@ -6,8 +6,7 @@ import { InlineSVGModule } from 'ng-inline-svg';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './components/button/button.component';
-import { PrototypeWrapperComponent } from './components/prototype-wrapper/prototype-wrapper.component';
+
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard/index';
 import { StyleguideComponent } from './pages/styleguide/styleguide.component';
@@ -15,6 +14,10 @@ import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { IconsComponent } from './pages/styleguide/icons/icons.component';
 import { TypographyComponent } from './pages/styleguide/typography/typography.component';
 import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-skins.component';
+import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
+
+import { ButtonComponent } from './components/button/button.component';
+import { PrototypeWrapperComponent } from './components/prototype-wrapper/prototype-wrapper.component';
 import { ComponentPageIntroComponent } from './components/component-page-intro/component-page-intro.component';
 import { StyleguideSampleComponent } from './components/styleguide-sample/styleguide-sample.component';
 import { IconComponent } from './components/icon/icon.component';
@@ -41,6 +44,7 @@ import { AlertComponent } from './components/alert/alert.component';
     IconComponent,
     InputComponent,
     AlertComponent,
+    AlertStyleguideComponent,
     AddComponent,
   ],
   imports: [
