@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonInnerComponent } from './button-inner.component';
+import { ButtonTypesComponent } from './button-types.component';
 
-describe('ButtonInnerComponent', () => {
-  let component: ButtonInnerComponent;
-  let fixture: ComponentFixture<ButtonInnerComponent>;
+describe('ButtonTypesComponent', () => {
+  let component: ButtonTypesComponent;
+  let fixture: ComponentFixture<ButtonTypesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtonInnerComponent ]
+      declarations: [ ButtonTypesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonInnerComponent);
+    fixture = TestBed.createComponent(ButtonTypesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

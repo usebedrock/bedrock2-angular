@@ -25,7 +25,7 @@ import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { PageTreeComponent } from './page-tree/page-tree.component';
-import { ButtonInnerComponent } from './components/button-inner/button-inner.component';
+import { ButtonTypesComponent } from './pages/styleguide/button-types/button-types.component';
 
 @NgModule({
   declarations: [
@@ -50,8 +50,8 @@ import { ButtonInnerComponent } from './components/button-inner/button-inner.com
     AlertStyleguideComponent,
     AddComponent,
     PageTreeComponent,
-    ButtonInnerComponent,
     IntroComponent,
+    ButtonTypesComponent,
   ],
   imports: [
     BrowserModule,

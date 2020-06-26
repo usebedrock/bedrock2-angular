@@ -8,27 +8,41 @@
   border: none;
   appearance: none;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: .8rem 1.2rem;
-}
-
-.c-button--icon {
-  padding: .8rem;
-}
-
-.c-button--icon img {
-  display: block;
-}
-
-.c-button svg {
-  position: relative;
-  top: 0.3rem;
-  width: 1.8rem;
-  height: 1.8rem;
 }
 
 .c-button svg path {
   fill: currentColor;
+}
+
+.c-button {
+  .c-icon + .c-button__label,
+  .c-button__label + .c-icon {
+    margin-left: .6rem;
+  }
+}
+
+.c-button {
+  .c-icon {
+    margin: 0 .8rem 0 0;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+.c-button--icon-right {
+  .c-icon {
+    margin: 0 0 0 .8rem;
+  }
+}
+
+.c-button--icon {
+  padding: .8rem;
+  .c-icon {
+    margin: 0;
+  }
 }
 
 .c-button--primary {

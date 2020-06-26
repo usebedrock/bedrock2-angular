@@ -1,3 +1,32 @@
-<button class="c-button c-button--{{this.skin}}">
-  <ng-content></ng-content>
+<button class="c-button c-button--{{this.skin}}" [ngClass]="getClass(this.layout)">
+  <ng-container [ngSwitch]="this.layout" *ngIf="this.icon !== undefined ; else default">
+    <ng-container *ngSwitchCase="'icon-only'">
+      <br-icon name="{{this.icon}}"></br-icon>
+      <span class="u-sr-only">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </span>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'icon-right'">
+      <div class="c-button__label">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </div>
+      <br-icon name="{{this.icon}}"></br-icon>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault>
+      <br-icon name="{{this.icon}}"></br-icon>
+      <div class="c-button__label">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #default>
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </ng-template>
+
+  <ng-template #content>
+    <ng-content></ng-content>
+  </ng-template>
 </button>

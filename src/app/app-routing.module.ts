@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard';
-import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent, IntroComponent } from './pages/styleguide';
+import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent, ButtonTypesComponent, IntroComponent } from './pages/styleguide';
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
 
 
@@ -28,6 +28,7 @@ const routes: Routes = [
       { path: 'typography', data: { title: 'Typography' }, component: TypographyComponent },
       { path: 'icons', data: { title: 'Icons' }, component: IconsComponent },
       { path: 'button-skins', data: { title: 'Button skins' }, component: ButtonSkinsComponent },
+      { path: 'button-types', data: { title: 'Button types' }, component: ButtonTypesComponent },
       { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
       { path: '', redirectTo: 'intro', pathMatch: 'full' }
     ]
