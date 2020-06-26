@@ -1,0 +1,29 @@
+/* ==========================================================================
+  c-panel
+   ========================================================================== */
+.c-panel {
+  border: 1px solid #DDD;
+  background: #FFF;
+  border-radius: 0.4rem;
+}
+
+.c-panel__header {
+  display: block;
+  border-bottom: 1px solid #DDD;
+  padding: 0.8rem 1.6rem;
+}
+
+.c-panel__title {
+  margin: 0.8rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.c-panel__body {
+  padding: 1.6rem;
+  display: block;
+}
+
+.c-panel__body + .c-panel__body {
+  border-top: 1px solid #DDD;
+}

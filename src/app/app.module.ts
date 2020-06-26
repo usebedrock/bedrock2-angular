@@ -15,6 +15,7 @@ import { IconsComponent } from './pages/styleguide/icons/icons.component';
 import { TypographyComponent } from './pages/styleguide/typography/typography.component';
 import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-skins.component';
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
+import { PanelComponent as PanelStyleguideComponent } from './pages/styleguide/panel/panel.component';
 import { IntroComponent } from './pages/styleguide/intro/intro.component';
 
 import { ButtonComponent } from './components/button/button.component';
@@ -26,6 +27,9 @@ import { InputComponent } from './components/input/input.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { PageTreeComponent } from './page-tree/page-tree.component';
 import { ButtonTypesComponent } from './pages/styleguide/button-types/button-types.component';
+import { PanelComponent } from './components/panel/panel.component';
+import { BodyComponent } from './components/panel/body/body.component';
+import { HeaderComponent } from './components/panel/header/header.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,10 @@ import { ButtonTypesComponent } from './pages/styleguide/button-types/button-typ
     PageTreeComponent,
     IntroComponent,
     ButtonTypesComponent,
+    PanelComponent,
+    PanelStyleguideComponent,
+    BodyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

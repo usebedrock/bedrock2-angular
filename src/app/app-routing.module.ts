@@ -4,6 +4,7 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard';
 import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent, ButtonTypesComponent, IntroComponent } from './pages/styleguide';
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
+import { PanelComponent as PanelStyleguideComponent } from './pages/styleguide/panel/panel.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'button-skins', data: { title: 'Button skins' }, component: ButtonSkinsComponent },
       { path: 'button-types', data: { title: 'Button types' }, component: ButtonTypesComponent },
       { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
+      { path: 'panels', data: { title: 'Panel' }, component: PanelStyleguideComponent },
       { path: '', redirectTo: 'intro', pathMatch: 'full' }
     ]
   },
