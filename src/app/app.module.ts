@@ -30,6 +30,7 @@ import { ButtonTypesComponent } from './pages/styleguide/button-types/button-typ
 import { PanelComponent } from './components/panel/panel.component';
 import { BodyComponent } from './components/panel/body/body.component';
 import { HeaderComponent } from './components/panel/header/header.component';
+import { IndexComponent } from './pages/dashboard/module-one/index/index.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { HeaderComponent } from './components/panel/header/header.component';
     PanelComponent,
     PanelStyleguideComponent,
     BodyComponent,
-    HeaderComponent
+    HeaderComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
