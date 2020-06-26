@@ -5,6 +5,7 @@ import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThree
 import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsComponent, ButtonSkinsComponent, ButtonTypesComponent, IntroComponent } from './pages/styleguide';
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
 import { PanelComponent as PanelStyleguideComponent } from './pages/styleguide/panel/panel.component';
+import { InputComponent as InputStyleguideComponent } from './pages/styleguide/input/input.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
       { path: 'button-types', data: { title: 'Button types' }, component: ButtonTypesComponent },
       { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
       { path: 'panels', data: { title: 'Panel' }, component: PanelStyleguideComponent },
+      { path: 'inputs', data: { title: 'Inputs' }, component: InputStyleguideComponent },
       { path: '', redirectTo: 'intro', pathMatch: 'full' }
     ]
   },

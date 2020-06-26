@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent } from './pages/dashboard/index';
+import { DashboardComponent, ModuleOneComponent, ModuleTwoComponent, ModuleThreeComponent, AddComponent} from './pages/dashboard/index';
 import { StyleguideComponent } from './pages/styleguide/styleguide.component';
 import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { IconsComponent } from './pages/styleguide/icons/icons.component';
@@ -16,6 +16,7 @@ import { TypographyComponent } from './pages/styleguide/typography/typography.co
 import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-skins.component';
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
 import { PanelComponent as PanelStyleguideComponent } from './pages/styleguide/panel/panel.component';
+import { InputComponent as InputStyleguideComponent } from './pages/styleguide/input/input.component';
 import { IntroComponent } from './pages/styleguide/intro/intro.component';
 
 import { ButtonComponent } from './components/button/button.component';
@@ -61,7 +62,8 @@ import { IndexComponent } from './pages/dashboard/module-one/index/index.compone
     PanelStyleguideComponent,
     BodyComponent,
     HeaderComponent,
-    IndexComponent
+    IndexComponent,
+    InputStyleguideComponent
   ],
   imports: [
     BrowserModule,
