@@ -10,7 +10,7 @@
   <div class *ngIf="this.code">
    <br-button skin="tertiary" (click)="isVisible=!isVisible">Toggle code</br-button>
    <pre class="br-styleguide-code-block" *ngIf="this.isVisible">
-    <code>{{this.code}}</code>
+    <code [innerHTML]="highlightedCode"></code>
   </pre>
   </div>
 </div>
