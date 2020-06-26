@@ -2,11 +2,6 @@
   c-toolbar (simple variant)
    ========================================================================== */
 
-.c-toolbar {
-  display: flex;
-  align-items: center;
-}
-
 .c-toolbar__title {
   font-size: 1.8rem;
   font-weight: 500;
@@ -14,4 +9,59 @@
 
 .c-toolbar__spacer {
   flex: 1 1 auto;
+}
+
+.c-toolbar {
+  min-height: 5rem;
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+
+  .c-toolbar__title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0;
+    display: inline;
+  }
+}
+
+.c-toolbar__item {
+    flex: 0 1 auto;
+}
+
+.c-toolbar__item:last-child {
+  margin-right: 0;
+}
+
+.c-toolbar__group--left,
+.c-toolbar__group--right {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.c-toolbar__group--left {
+  justify-content: flex-start;
+}
+
+.c-toolbar__group--left .c-toolbar__item {
+  margin-right: 1rem;
+}
+
+.c-toolbar__group--left .c-toolbar__item:only-child {
+  margin: 0;
+}
+
+.c-toolbar__group--right {
+  justify-content: flex-end;
+}
+
+.c-toolbar__group--right .c-toolbar__item {
+  margin-left: 1rem;
+}
+
+.c-toolbar__group--right .c-toolbar__item:only-child {
+  margin: 0;
 }

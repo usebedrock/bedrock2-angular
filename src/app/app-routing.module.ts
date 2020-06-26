@@ -6,6 +6,7 @@ import { StyleguideComponent, ColorsComponent, TypographyComponent, IconsCompone
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
 import { PanelComponent as PanelStyleguideComponent } from './pages/styleguide/panel/panel.component';
 import { InputComponent as InputStyleguideComponent } from './pages/styleguide/input/input.component';
+import { ToolbarComponent as ToolbarStyleguideComponent } from './pages/styleguide/toolbar/toolbar.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
       { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
       { path: 'panels', data: { title: 'Panel' }, component: PanelStyleguideComponent },
       { path: 'inputs', data: { title: 'Inputs' }, component: InputStyleguideComponent },
+      { path: 'toolbar', data: { title: 'Toolbar' }, component: ToolbarStyleguideComponent },
       { path: '', redirectTo: 'intro', pathMatch: 'full' }
     ]
   },

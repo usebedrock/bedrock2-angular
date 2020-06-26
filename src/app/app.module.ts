@@ -17,6 +17,7 @@ import { ButtonSkinsComponent } from './pages/styleguide/button-skins/button-ski
 import { AlertComponent as AlertStyleguideComponent } from './pages/styleguide/alert/alert.component';
 import { PanelComponent as PanelStyleguideComponent } from './pages/styleguide/panel/panel.component';
 import { InputComponent as InputStyleguideComponent } from './pages/styleguide/input/input.component';
+import { ToolbarComponent as ToolbarStyleguideComponent } from './pages/styleguide/toolbar/toolbar.component';
 import { IntroComponent } from './pages/styleguide/intro/intro.component';
 
 import { ButtonComponent } from './components/button/button.component';
@@ -32,6 +33,10 @@ import { PanelComponent } from './components/panel/panel.component';
 import { BodyComponent } from './components/panel/body/body.component';
 import { HeaderComponent } from './components/panel/header/header.component';
 import { IndexComponent } from './pages/dashboard/module-one/index/index.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ItemComponent } from './components/toolbar/item/item.component';
+import { GroupComponent } from './components/toolbar/group/group.component';
+import { TitleComponent } from './components/toolbar/title/title.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +68,12 @@ import { IndexComponent } from './pages/dashboard/module-one/index/index.compone
     BodyComponent,
     HeaderComponent,
     IndexComponent,
-    InputStyleguideComponent
+    InputStyleguideComponent,
+    ToolbarStyleguideComponent,
+    ToolbarComponent,
+    ItemComponent,
+    GroupComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
