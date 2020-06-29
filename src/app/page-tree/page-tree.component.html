@@ -5,7 +5,7 @@
 </ul>
 
 <ng-template #pageTree let-page="page">
-  <a [routerLink]="page.path" routerLinkActive="active">{{page.name}}</a>
+  <a [routerLink]="page.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{page.name}}</a>
   <ul *ngIf="page.children.length > 0" class="child-list br-styleguide-bordered-list">
     <ng-container *ngFor="let child of page.children">
       <li><ng-container *ngTemplateOutlet="pageTree;context:{page: child}"></ng-container></li>
