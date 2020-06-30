@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Prism from 'prismjs';
+import {Route, Router} from '@angular/router';
 
 @Component({
   selector: 'br-styleguide-sample',
@@ -13,6 +14,4 @@ export class StyleguideSampleComponent {
   public get highlightedCode(): string {
     return Prism.highlight(this.code, Prism.languages.html, 'html');
   }
-
-  constructor() { }
 }

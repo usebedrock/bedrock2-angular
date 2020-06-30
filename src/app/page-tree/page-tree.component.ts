@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Route, Router} from '@angular/router';
 
 interface Page {
   name: string;
   path: string;
+  isCategory: boolean;
   children?: Page[];
 }
 
@@ -12,32 +13,30 @@ interface Page {
   templateUrl: './page-tree.component.html',
   styleUrls: ['./page-tree.component.scss']
 })
-export class PageTreeComponent {
+export class PageTreeComponent implements OnInit {
+  @Input() public routes: Route[] = [];
   public pages: Page[] = [];
 
-  public constructor(private readonly router: Router) {
-    this.pages = this.router.config
-      .filter(filterRoutes)
-      .map(route => mapRouteToPage(route, ''));
+  public ngOnInit() {
+    this.pages = this.routes.map(route => {
+      return this.mapRouteToPage(route, '');
+    });
   }
-}
 
-function mapRouteToPage(route: Route, parentPath: string): Page {
-  let children: Page[] = [];
-  const path = `${parentPath}/${route.path}`;
-  if (route.children && route.children.length > 0) {
-    children = route.children
-      .filter(filterRoutes)
-      .map(childRoute => mapRouteToPage(childRoute, path));
+  private mapRouteToPage(route: Route, parentPath: string): Page {
+    let children: Page[] = [];
+    const path = `${parentPath}/${route.path}`;
+    if (route.children && route.children.length > 0) {
+      children = route.children
+        .map(childRoute => this.mapRouteToPage(childRoute, path));
+    }
+    const name = route.data ? route.data.title : route.path;
+    const isCategory = route.data ? route.data.isCategory : false;
+    return {
+      name,
+      path,
+      isCategory,
+      children
+    };
   }
-  const name = route.data ? route.data.title : route.path;
-  return {
-    name,
-    path,
-    children
-  };
-}
-
-function filterRoutes(route: Route): boolean {
-  return !['styleguide', ''].includes(route.path);
 }

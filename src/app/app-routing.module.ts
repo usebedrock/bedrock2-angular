@@ -29,15 +29,23 @@ const routes: Routes = [
     path: 'styleguide', data: { title: 'Styleguide' }, component: StyleguideComponent,
     children: [
       { path: 'intro', data: { title: 'Intro' }, component: IntroComponent },
-      { path: 'colors', data: { title: 'Colors' }, component: ColorsComponent },
-      { path: 'typography', data: { title: 'Typography' }, component: TypographyComponent },
-      { path: 'icons', data: { title: 'Icons' }, component: IconsComponent },
-      { path: 'button-skins', data: { title: 'Button skins' }, component: ButtonSkinsComponent },
-      { path: 'button-types', data: { title: 'Button types' }, component: ButtonTypesComponent },
-      { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
-      { path: 'panels', data: { title: 'Panel' }, component: PanelStyleguideComponent },
-      { path: 'inputs', data: { title: 'Inputs' }, component: InputStyleguideComponent },
-      { path: 'toolbar', data: { title: 'Toolbar' }, component: ToolbarStyleguideComponent },
+      { path: 'basics', data: { title: 'Basics', isCategory: true }, children: [
+          { path: '', redirectTo: 'colors', pathMatch: 'full' },
+          { path: 'colors', data: { title: 'Colors' }, component: ColorsComponent },
+          { path: 'typography', data: { title: 'Typography' }, component: TypographyComponent },
+          { path: 'icons', data: { title: 'Icons' }, component: IconsComponent }
+        ]
+      },
+      { path: 'components', data: { title: 'Components', isCategory: true }, children: [
+          { path: '', redirectTo: 'button-skins', pathMatch: 'full' },
+          { path: 'button-skins', data: { title: 'Button skins' }, component: ButtonSkinsComponent },
+          { path: 'button-types', data: { title: 'Button types' }, component: ButtonTypesComponent },
+          { path: 'alerts', data: { title: 'Alert' }, component: AlertStyleguideComponent },
+          { path: 'panels', data: { title: 'Panel' }, component: PanelStyleguideComponent },
+          { path: 'inputs', data: { title: 'Inputs' }, component: InputStyleguideComponent },
+          { path: 'toolbar', data: { title: 'Toolbar' }, component: ToolbarStyleguideComponent },
+        ]
+      },
       { path: '', redirectTo: 'intro', pathMatch: 'full' }
     ]
   },
