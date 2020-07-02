@@ -14,13 +14,16 @@ interface Page {
   styleUrls: ['./page-tree.component.scss']
 })
 export class PageTreeComponent implements OnInit {
+  @Input() public rootPath = '';
   @Input() public routes: Route[] = [];
   public pages: Page[] = [];
 
   public ngOnInit() {
-    this.pages = this.routes.map(route => {
-      return this.mapRouteToPage(route, '');
-    });
+    this.pages = this.routes
+      .filter(filterEmptyRoutes)
+      .map(route => {
+        return this.mapRouteToPage(route, this.rootPath);
+      });
   }
 
   private mapRouteToPage(route: Route, parentPath: string): Page {
@@ -28,6 +31,7 @@ export class PageTreeComponent implements OnInit {
     const path = `${parentPath}/${route.path}`;
     if (route.children && route.children.length > 0) {
       children = route.children
+        .filter(filterEmptyRoutes)
         .map(childRoute => this.mapRouteToPage(childRoute, path));
     }
     const name = route.data ? route.data.title : route.path;
@@ -39,4 +43,8 @@ export class PageTreeComponent implements OnInit {
       children
     };
   }
+}
+
+function filterEmptyRoutes(route: Route): boolean {
+  return route.path !== '';
 }

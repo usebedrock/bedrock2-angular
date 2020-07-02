@@ -5,16 +5,16 @@ import {Route, Router} from '@angular/router';
   selector: 'app-styleguide',
   templateUrl: './styleguide.component.html',
 })
-export class StyleguideComponent implements OnInit {
+export class StyleguideComponent {
   public routes: Route[] = [];
 
   constructor(private readonly router: Router) {
-    this.routes = this.router.config.filter(route => {
-      return ['styleguide'].includes(route.path);
-    });
-  }
-
-  ngOnInit(): void {
+    const styleguideRoutes = this.router.config
+      .filter(route => {
+        return ['styleguide'].includes(route.path);
+      })[0];
+    this.routes = styleguideRoutes.children
+      .filter(route => !['intro'].includes(route.path));
   }
 
 }
