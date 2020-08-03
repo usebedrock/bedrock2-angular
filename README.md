@@ -2,9 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
+## Install the CLI
+
+First, install the CLI: `npm install -g @angular/cli`.
+This gives you access to the ng command in your terminal.
+
 ## Install node modules
 
-First, install the node modules: `npm install`
+Install the node modules: `npm install`
 
 ## Development server
 
